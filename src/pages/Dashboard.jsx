@@ -15,7 +15,7 @@ const Dashboard = () => {
         <Header />
 
         {/* Cards */}
-        <div className="cards flex justify-between gap-6 px-7 my-8">
+        <div className="cards  flex justify-between items-center gap-2 p-1.5 md:gap-5 px-5 my-6">
           <IncomeCard />
           <ExpenseCard />
           <BalanceCard />
