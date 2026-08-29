@@ -10,21 +10,13 @@ import { Link } from 'react-router-dom';
 const Sidebar = ({ open, openside, closeside }) => {
   return (
     <aside
-      // className={`h-auto shrink-0 overflow-hidden transition-all duration-300 ease-in-out border 
-      //   ${open ? "w-[18%]" : "w-0"}
-      // `}  
-//       className={`h-full shrink-0 overflow-hidden border transition-all duration-300 ease-in-out
-//   ${open
-//           ? "w-full md:w-[18%] opacity-100"
-//           : "w-0 opacity-0 border-none"
-//         }
-// `}
-className={`fixed inset-y-0 left-0 z-50 md:relative shrink-0 overflow-hidden border transition-all duration-300 ease-in-out bg-white
-  ${open 
-    ? "w-64 md:w-[18%]  translate-x-0" 
-    : "w-0 -translate-x-full md:translate-x-0 border-none"
-  }
-`}
+
+      className={`fixed inset-y-0 left-0 z-50 md:relative shrink-0 overflow-hidden border transition-all duration-300 ease-in-out bg-white
+      ${open
+          ? "w-64 md:w-[18%]  translate-x-0"
+          : "w-0 -translate-x-full md:translate-x-0 border-none"
+        }
+          `}
     >
       <div className="h-full min-w-55">
         <div className="flex justify-end">
