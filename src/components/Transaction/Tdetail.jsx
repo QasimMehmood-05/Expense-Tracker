@@ -47,7 +47,7 @@ const Tdetail = () => {
 
   return (
     <div className="w-full overflow-x-auto rounded-xl border border-gray-100 bg-white shadow-sm">
-      <table className="w-full table-fixed border-collapse text-left text-sm">
+      <table className="w-full border-collapse text-left text-sm">
         {/* Table Header */}
         <thead>
           <tr className="bg-emerald-50/60 text-xs uppercase tracking-wider text-emerald-800">
@@ -69,18 +69,18 @@ const Tdetail = () => {
                 </svg>
               </div>
             </th>
-            <th className="w-[16%] px-6 py-4 font-semibold">Amount</th>
-            <th className="w-[28%] px-6 py-4 font-semibold">Description</th>
-            <th className="w-[16%] px-6 py-4 font-semibold">Type</th>
-            <th className="w-[14%] px-6 py-4 font-semibold">Category</th>
-            <th className="w-[18%] px-6 py-4 font-semibold text-center">Action</th>
+            <th className="  px-3 py-3 font-semibold">Amount</th>
+            <th className="  px-4 py-3 font-semibold">Description</th>
+            <th className="  px-5 py-3 font-semibold">Type</th>
+            <th className="  px-3 py-3 font-semibold">Category</th>
+            <th className="  px-3 py-3 font-semibold text-center">Action</th>
           </tr>
         </thead>
 
         {/* Dynamic Table Body */}
         <tbody className="divide-y divide-gray-100 font-medium text-gray-700">
           {transactions.map((transaction) => {
-            const isEditing = editingId === transaction.id;
+            const isEditing = (editingId === transaction.id);
             const isExpense = Number(transaction.amount) < 0;
 
             if (isEditing) {
