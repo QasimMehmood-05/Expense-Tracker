@@ -8,15 +8,15 @@ const Header = () => {
 
   return (
     <>
-      <div className='parent border rounded-2xl flex justify-between items-center px-3 my-2 mx-0.5 md: text-sm  p-0'>
-        <div className='lheader'>
-          <h2 className='text-3xl  md: font-medium'>Dashboard</h2>
-          <p className='font-medium'>Welcome Back!</p>
+      <div className='parent border rounded-2xl flex justify-between items-center px-3 m-2 mx-0.5'>
+        <div className='lheader font-bold'>
+          <h2 className='  text-xl md:text-2xl'>Dashboard</h2>
+          <p className='font-medium '>Welcome Back!</p>
         </div>
-        <div className='Rheader mx-3 flex  justify-center items-center gap-3'>
-          <button className='bg-gray-400 rounded  p-1 flex items-center justify-center gap-x-2 hover:scale-105 md: py-1' > <FiRefreshCw />
+        <div className='Rheader m-2 flex  justify-center items-center gap-2'>
+          <button className='bg-gray-400 rounded  p-1 flex items-center justify-center gap-x-1 hover:scale-105 ' > <FiRefreshCw />
             <span>Refersh</span></button>
-          <button onClick={() => { setshowmodal(true)  }} className='bg-blue-400 rounded  mx-3 hover:scale-105 md: my-2 py-1.5 px-0 ' >  + Add Transaction</button>
+          <button onClick={() => { setshowmodal(true)  }} className='  bg-blue-400 rounded  hover:scale-105  my-2 py-1.5 px-1.5 mx-2' >  + Add Record</button>
         </div>
       </div>
 

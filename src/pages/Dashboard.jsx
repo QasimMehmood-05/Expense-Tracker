@@ -8,7 +8,7 @@ import Recenttran from "../components/Dashboard/Recenttran";
 const Dashboard = () => {
 
   return (
-    <div className={` flex w-full min-h-screen border bg-gray-100 `}>
+    <div className={` flex w-full min-h-screen border bg-gray-100 text-gray-800 `}>
       {/* Main Content */}
       <main className="flex-1 min-w-0 transition-all duration-300">
 
