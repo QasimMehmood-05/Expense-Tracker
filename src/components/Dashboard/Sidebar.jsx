@@ -3,16 +3,29 @@ import { FaArrowTrendUp, FaArrowTrendDown, } from "react-icons/fa6";
 import { SiGoogleanalytics } from "react-icons/si";
 import { FiSettings } from "react-icons/fi";
 import { LuLayoutDashboard } from "react-icons/lu";
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { IoAdd } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 const Sidebar = ({ open, openside, closeside }) => {
   return (
     <aside
-      className={`h-auto shrink-0 overflow-hidden transition-all duration-300 ease-in-out border
-        ${open ? "w-[18%]" : "w-0"}
-      `}>
+      // className={`h-auto shrink-0 overflow-hidden transition-all duration-300 ease-in-out border 
+      //   ${open ? "w-[18%]" : "w-0"}
+      // `}  
+//       className={`h-full shrink-0 overflow-hidden border transition-all duration-300 ease-in-out
+//   ${open
+//           ? "w-full md:w-[18%] opacity-100"
+//           : "w-0 opacity-0 border-none"
+//         }
+// `}
+className={`fixed inset-y-0 left-0 z-50 md:relative shrink-0 overflow-hidden border transition-all duration-300 ease-in-out bg-white
+  ${open 
+    ? "w-64 md:w-[18%]  translate-x-0" 
+    : "w-0 -translate-x-full md:translate-x-0 border-none"
+  }
+`}
+    >
       <div className="h-full min-w-55">
         <div className="flex justify-end">
           <button
@@ -59,9 +72,9 @@ const Sidebar = ({ open, openside, closeside }) => {
           </li>
 
           <li >
-            <Link to={'/Settings'} className="flex items-center justify-center gap-4 cursor-pointer hover:text-blue-400 hover:scale-110 transition-transform"> 
-            <FiSettings />
-            Settings
+            <Link to={'/Settings'} className="flex items-center justify-center gap-4 cursor-pointer hover:text-blue-400 hover:scale-110 transition-transform">
+              <FiSettings />
+              Settings
             </Link>
           </li>
         </ul>
