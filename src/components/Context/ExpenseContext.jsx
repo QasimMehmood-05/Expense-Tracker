@@ -2,7 +2,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
 
 const ExpenseContext = createContext()
-
 export const ExpenseProvider = ({ children }) => {
     // 1. Initialize State directly from LocalStorage (Lazy initialization)
     const [income, setincome] = useState(() => {
@@ -26,10 +25,13 @@ export const ExpenseProvider = ({ children }) => {
 
     // Derived Values
     const totalExpense = transactions.reduce((acc, curr) => acc + Number(curr.amount), 0)
+    let currentBalance=0
     if (income===0) {
-        currentBalance+=0
+         currentBalance=0
+    } else {
+        
+         currentBalance = income - totalExpense
     }
-    const currentBalance = income - totalExpense
 
     // Action Methods
     const addTransaction = (transactionData) => {
