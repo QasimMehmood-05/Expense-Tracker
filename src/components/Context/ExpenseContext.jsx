@@ -26,6 +26,9 @@ export const ExpenseProvider = ({ children }) => {
 
     // Derived Values
     const totalExpense = transactions.reduce((acc, curr) => acc + Number(curr.amount), 0)
+    if (income===0) {
+        currentBalance+=0
+    }
     const currentBalance = income - totalExpense
 
     // Action Methods
