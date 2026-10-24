@@ -88,7 +88,7 @@ export default function AddTransactionModal({ isOpen, onClose }) {
           </div>
 
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Category *</label>
+            <label className="mb-1 block text-sm font-medium text-gray-700">Category </label>
             <select
               name="category"
               value={formData.category}
@@ -104,7 +104,7 @@ export default function AddTransactionModal({ isOpen, onClose }) {
           </div>
 
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Amount *</label>
+            <label className="mb-1 block text-sm font-medium text-gray-700">Amount </label>
             <input
               type="number"
               name="amount"
@@ -129,7 +129,7 @@ export default function AddTransactionModal({ isOpen, onClose }) {
           </div>
 
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Date *</label>
+            <label className="mb-1 block text-sm font-medium text-gray-700">Date </label>
             <input
               type="date"
               name="date"
