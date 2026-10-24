@@ -2,6 +2,8 @@
 import React, { createContext, useContext, useState, useEffect } from "react"
 
 const ExpenseContext = createContext()
+const API_URL = "http://localhost:3000/api/transactions";
+
 export const ExpenseProvider = ({ children }) => {
     // 1. Initialize State directly from LocalStorage (Lazy initialization)
     const [income, setincome] = useState(() => {
